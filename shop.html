@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIGBREW</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="image/Logo2.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
+    rel='stylesheet'>
+</head>
+<body>
+
+    <!------------------Header-------------------->
+    <header>
+        <div class="navbar">
+            <img class="logo" src="image/Logo2.png" alt="logo">
+            <ul class="nav_link">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="register-btn">
+                <a href="#" class="action_btn">Sign in</a>
+                <a href="#" class="join_btn">Join now</a>
+            </div>
+            <div class="toggle_btn">
+                <i class='bx bx-menu' ></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="action_btn">Sign in</a></li>
+            <li><a href="#" class="join_btn">Join now</a></li>
+        </div>
+    </header>
+
+
+    <!-----------------------Shop---------------------------->
+       
+
+    <!------------------------Script-------------------------->
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'bx bx-x'
+                : 'bx bx-menu'
+        }
+    </script>
+</body>
+</html>

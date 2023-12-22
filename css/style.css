@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #BC6D1A;
+    
+}
+
+/* ============= Header =================*/
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+
+}
+
+a:hover {
+    color: #6e4110;
+}
+
+header {
+    position: relative;
+    padding: 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    width: 70px;
+    height: 80px;
+}
+
+.navbar .nav_link {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    font-size: 2.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+.action_btn {
+    background-color: transparent;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: solid #6e4110 2px;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #6e4110;
+    background-color: #ae6415;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+
+.join_btn {
+    background-color: #6e4110;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: solid #6e4110 2px;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.join_btn:hover {
+    scale: 1.05;
+    color: #6e4110;
+    background-color: #ae6415;
+}
+
+.join_btn:active {
+    scale: 0.95;
+}
+
+/* ============= Dropdown Menu =================*/
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 90px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 390px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menu .join_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*============ Home Style ============*/
+.home-section {
+    padding: 0 10rem;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.home-text h1{
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #6e4110;
+}
+
+.home-text p {
+    font-weight: 400px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem 0 1.5rem;
+    color: #fff;
+}
+
+.btn {
+    max-width: 160px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+    border-radius: 2rem;
+    background-color: #6e4110;
+    border: solid #6e4110 2px;
+}
+
+.btn span {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    scale: 1.05;
+    color: #6e4110;
+    background-color: #ae6415;
+}
+
+.btn:active {
+    scale: 0.95;
+}
+
+.home-img {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+/* ============= About Style =================*/
+
+
+
+
+
+
+
+/* ============= Responsive Header =================*/
+@media (max-width: 992px) {
+    .navbar .nav_link,
+    .navbar .register-btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* ============= Responsive Home =================*/
+@media (max-width: 768px) {
+    .home-section {
+        justify-content: center;
+        grid-template-columns: 1fr;  /* Switch to single-column layout */
+        padding: 0 1rem;
+    }
+
+    .home-text h1 {
+        text-align: center;
+        font-size: clamp(1rem, 3rem, 3rem);
+    }
+
+    .home-text p {
+        text-align: center;
+        line-height: 1.5em;  /* Increase line spacing for better readability */
+    }
+
+    .btn {
+        width: 100%;  /* Full width on smaller screens */
+        font-size: 0.8rem;  /* Adjust font size if needed */
+        padding: 0.8rem 1rem;  /* Adjust padding if needed */
+        margin: 0 auto;
+      }
+
+
+    .home-img {
+        display: block;  /* Ensure image takes full width in single-column layout */
+        width: 100%;
+        height: auto;  /* Maintain aspect ratio */
+    }
+}
+
